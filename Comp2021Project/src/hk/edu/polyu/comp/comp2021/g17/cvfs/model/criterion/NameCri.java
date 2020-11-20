@@ -11,6 +11,15 @@ class NameCri extends Criterion{
 		// TODO 
 		//return true if file name contains checkName
 		//false otherwise
+		
+		//mc~ contains意思是不是就是包含这一段字符就可以 但是可以比checkname长
+		String fileName=file.getName();
+		int length=fileName.length();
+		String checkName=(String) this.val;
+		for(int i=0; i<length; i++){
+			if(fileName.startsWith(this.val,i)) return true;
+		}
 		return false;
 	}
+
 }
