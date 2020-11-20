@@ -11,6 +11,33 @@ class SizeCri extends Criterion{
 	public
 	boolean assertCri(File file) {
 		// TODO Auto-generated method stub
-		return false;
+		int fileSize=file.size;
+		Op op=this.op;
+		int checkSize=(Integer) this.val;
+		if(op==Op.G){
+			if(fileSize>checkSize) return true;
+			return false
+		}
+		else if(op===Op.GE){
+			if(fileSize>=checkSize) return true;
+			return false;
+		}
+		else if(op==Op.E){
+			if(fileSize==checkSize) return true;
+			return false;
+		}
+		else if(op=Op.NE){
+			if(fileSize!=checkSize) return true;
+			return false;
+		}
+		else if(op==Op.S){
+			if(fileSize<checkSize) return true;
+			return false;
+		}
+		else {
+			if(fileSize<=checkSize) return true;
+			return false;
+		}
 	}
+	
 }
