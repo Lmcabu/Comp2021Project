@@ -13,7 +13,12 @@ class TypeCri extends Criterion{
 	boolean assertCri(File file) {
 		// TODO Auto-generated method stub
 		// cast file to a document then read its type
+		FileType fileType=file.type;
+		String checkType=(String) this.val;
+		String fileTypeString=fileType.toString();
+		if(fileTypeString.equals(checkType)) return true;
 		return false;
+		
 	}
 	
 }
