@@ -168,3 +168,4 @@ public abstract class Criterion{
 		return String.format("%15s | %10s | %10s | %20s",name, attrname, op.name(), val.toString());
 	}
 }
+//
